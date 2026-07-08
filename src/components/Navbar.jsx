@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import cmfLogo from '../assets/cmf-logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,7 +75,7 @@ export default function Navbar() {
           }}
         >
           <img 
-            src={cmfLogo}
+            src="/logo.png"
             alt="CodeMeshFlow Logo"
             style={{
               height: '50px',
