@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import cmfLogo from '../assets/cmf-logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +62,7 @@ export default function Navbar() {
           height: '80px'
         }}
       >
-        {/* Logo redirecting to official website */}
+        {/* Brand redirecting to official website */}
         <a 
           href="https://www.codemeshflow.in"
           target="_blank"
@@ -75,15 +74,18 @@ export default function Navbar() {
             gap: '10px' 
           }}
         >
-          <img 
-            src={cmfLogo}
-            alt="CodeMeshFlow Logo"
+          <span
             style={{
-              height: '50px',
-              width: 'auto',
-              objectFit: 'contain'
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.35rem',
+              fontWeight: 800,
+              color: '#fff',
+              letterSpacing: 0,
+              lineHeight: 1
             }}
-          />
+          >
+            CMF <span className="text-gradient">QR Generator</span>
+          </span>
         </a>
 
         {/* Desktop Nav Links */}

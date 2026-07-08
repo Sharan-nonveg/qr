@@ -268,7 +268,7 @@ export default function QRPreview({ qrValue }) {
     doc.setFont("helvetica", "bold");
     doc.setFontSize(26);
     doc.setTextColor(255, 255, 255);
-    doc.text("AntiGravity QR Code", 105, 35, { align: "center" });
+    doc.text("CMF QR Code", 105, 35, { align: "center" });
 
     doc.setFont("helvetica", "normal");
     doc.setFontSize(10);
@@ -292,7 +292,7 @@ export default function QRPreview({ qrValue }) {
     doc.setTextColor(0, 229, 255);
     doc.text("POWERED BY CODEMESHFLOW.IN", 105, 270, { align: "center" });
 
-    doc.save('antigravity-qr-code.pdf');
+    doc.save('cmf-qr-code.pdf');
   };
 
   // Copy encoded value to clipboard

@@ -33,7 +33,7 @@ export default function Footer() {
                   letterSpacing: '-0.5px'
                 }}
               >
-                AntiGravity<span className="text-gradient" style={{ fontWeight: 800 }}>QR</span>
+                CMF <span className="text-gradient" style={{ fontWeight: 800 }}>QR</span>
               </span>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '20px', maxWidth: '320px' }}>
@@ -97,7 +97,7 @@ export default function Footer() {
           }}
           className="footer-bottom"
         >
-          <span>&copy; {new Date().getFullYear()} AntiGravity QR. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} CMF QR. All rights reserved.</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             Made by 
             <a 
