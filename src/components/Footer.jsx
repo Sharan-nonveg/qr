@@ -1,5 +1,4 @@
 import React from 'react';
-import { Cpu } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -25,20 +24,6 @@ export default function Footer() {
           {/* Brand Col */}
           <div style={{ gridColumn: 'span 2' }} className="footer-brand-col">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-              <div 
-                style={{ 
-                  background: 'linear-gradient(135deg, #00E5FF 0%, #3B82F6 100%)',
-                  borderRadius: '8px',
-                  width: '28px',
-                  height: '28px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 0 10px rgba(0, 229, 255, 0.2)'
-                }}
-              >
-                <Cpu size={16} color="#000" />
-              </div>
               <span 
                 style={{ 
                   fontFamily: 'var(--font-heading)', 
@@ -113,8 +98,8 @@ export default function Footer() {
           className="footer-bottom"
         >
           <span>&copy; {new Date().getFullYear()} AntiGravity QR. All rights reserved.</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            Powered by 
+          <span style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            Made by 
             <a 
               href="https://www.codemeshflow.in" 
               target="_blank" 
@@ -124,13 +109,23 @@ export default function Footer() {
                 textDecoration: 'none',
                 fontWeight: 600,
                 letterSpacing: '0.5px',
-                transition: 'color 0.2s ease',
-                display: 'flex',
+                transition: 'all 0.2s ease',
+                display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px'
+                gap: '4px',
+                padding: '6px 12px',
+                borderRadius: '6px',
+                background: 'linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 87, 34, 0.2))',
+                border: '1px solid rgba(255, 152, 0, 0.3)',
               }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--primary-color)'}
-              onMouseLeave={(e) => e.target.style.color = '#fff'}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'linear-gradient(135deg, rgba(255, 152, 0, 0.4), rgba(255, 87, 34, 0.4))';
+                e.target.style.borderColor = 'rgba(255, 152, 0, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = 'linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 87, 34, 0.2))';
+                e.target.style.borderColor = 'rgba(255, 152, 0, 0.3)';
+              }}
             >
               CodeMeshFlow
             </a>
@@ -145,6 +140,10 @@ export default function Footer() {
           }
           .footer-grid {
             grid-template-columns: 1fr 1fr !important;
+          }
+          .footer-bottom {
+            flex-direction: column;
+            align-items: flex-start !important;
           }
         }
         @media (max-width: 480px) {
