@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Cpu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import cmfLogo from '../assets/cmf-logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,36 +75,15 @@ export default function Navbar() {
             gap: '10px' 
           }}
         >
-          <div 
-            style={{ 
-              background: 'linear-gradient(135deg, #00E5FF 0%, #3B82F6 100%)',
-              borderRadius: '10px',
-              width: '36px',
-              height: '36px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 0 15px rgba(0, 229, 255, 0.3)'
+          <img 
+            src={cmfLogo}
+            alt="CodeMeshFlow Logo"
+            style={{
+              height: '50px',
+              width: 'auto',
+              objectFit: 'contain'
             }}
-          >
-            <Cpu size={20} color="#000" />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-            <span 
-              style={{ 
-                fontFamily: 'var(--font-heading)', 
-                fontSize: '1.4rem', 
-                fontWeight: 800,
-                color: '#fff',
-                letterSpacing: '-0.5px'
-              }}
-            >
-              AntiGravity<span className="text-gradient" style={{ fontWeight: 800 }}>QR</span>
-            </span>
-            <span style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.5px', marginTop: '2px' }}>
-              POWERED BY <strong style={{ color: '#00E5FF', fontWeight: 600 }}>CodeMeshFlow</strong>
-            </span>
-          </div>
+          />
         </a>
 
         {/* Desktop Nav Links */}
