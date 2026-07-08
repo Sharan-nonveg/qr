@@ -117,7 +117,7 @@ export default function Dashboard() {
               letterSpacing: '-1px'
             }}
           >
-            AntiGravity <span className="text-gradient">QR Generator</span>
+            CMF <span className="text-gradient">QR Generator</span>
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
             Create customized, high-resolution QR codes in under 30 seconds. No payments, no limits, no registration.
